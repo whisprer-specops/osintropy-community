@@ -1,0 +1,16 @@
+{
+  "name": "OSINTropy",
+  "edition": "Community",
+  "binary": "osintropy",
+  "crate_dir": "v5.0.0",
+  "url": "https://github.com/whisprer-specops/osintropy-community",
+  "download_page": "https://github.com/whisprer-specops/osintropy-community/releases/latest",
+  "docs": [
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "check_unix": "scripts/check.sh",
+  "check_windows": "scripts/check.ps1",
+  "repository": "https://github.com/whisprer-specops/osintropy-community"
+}

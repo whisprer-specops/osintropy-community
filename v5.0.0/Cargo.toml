@@ -1,0 +1,31 @@
+[package]
+name = "osintropy"
+version = "5.0.0"
+edition = "2021"
+rust-version = "1.87"
+description = "Provenance-first, local OSINT case notebook"
+authors = ["whispr.dev"]
+# GPL-3.0-only, as in the repository's LICENSE and the SPDX line atop every code file.
+license = "GPL-3.0-only"
+repository = "https://github.com/whisprer-specops/osintropy-community"
+readme = "README.md"
+default-run = "osintropy"
+
+# Every dependency below, at exactly this version, is already in SkeleTrace's Cargo.lock,
+# so a machine that builds SkeleTrace builds this with nothing new to fetch or compile.
+[dependencies]
+serde_json = { version = "=1.0.149", features = ["preserve_order", "arbitrary_precision"] }
+chrono = { version = "=0.4.44", default-features = false, features = ["clock", "std"] }
+uuid = { version = "=1.22.0", features = ["v4"] }
+ureq = { version = "=2.12.1", features = ["socks-proxy"] }
+base64 = "=0.22.1"
+rusqlite = { version = "=0.31.0", features = ["bundled", "backup"] }
+ring = "=0.17.14"
+idna = "=1.1.0"
+icu_normalizer = { version = "=2.1.1", default-features = false, features = ["compiled_data"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+strip = true
