@@ -6,10 +6,13 @@ Version 5.0.0 is OSINTropy rewritten in Rust. It is one self-contained program, 
 
 **An observation is a source hit, not a resolved identity.** People, organisations and domains have separate subject types. Identical names stay separate even within one type. Search hits for accounts, articles, cases or archived pages are unverified leads and cannot be linked as records. Source diversity is a Shannon entropy measurement of the *mix of sources*, never a probability that a claim is true.
 
+**New here?** Start with the [quickstart guide](docs/quickstart/QUICKSTART.md): a plain-English tour with pictures, from installing to your first results. It's also a [PDF](docs/quickstart/osintropy-quickstart.pdf) to keep or print.
+
 ## What is where
 
 | Folder | Contents |
 | --- | --- |
+| `docs/quickstart/` | The quickstart guide, in Markdown and as a PDF |
 | `v5.0.0/` | This release: the Rust source (`src/`, `tests/`, `scripts/`, `Cargo.toml`, `Cargo.lock`) and the source catalogue, [SOURCES.md](v5.0.0/SOURCES.md) |
 | `packaging/`, `.github/workflows/` | How releases are built, packed and published for Windows, macOS and Linux |
 
